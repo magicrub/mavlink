@@ -558,6 +558,9 @@
       <entry value="4" name="FENCE_ACTION_RTL">
         <description>Switch to RTL (return to launch) mode and head for the return point.</description>
       </entry>
+      <entry value="5" name="FENCE_ACTION_GUIDED_THROUGH_HOME">
+        <description>Switch to guided mode and travel to a point on the other side of the fence with a heading that takes you through home. This is similar to FENCE_ACTION_RTL except it just keeps going and at the current altitude and will eventually hit the fence again and again flying over/through home each time</description>
+      </entry>
     </enum>
     <enum name="FENCE_BREACH">
       <entry value="0" name="FENCE_BREACH_NONE">
