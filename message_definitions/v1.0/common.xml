@@ -5107,6 +5107,14 @@
       <field type="uint32_t" name="active" display="bitmask">Active outputs</field>
       <field type="float[32]" name="actuator">Servo / motor output array values. Zero values indicate unused channels.</field>
     </message>
+    <message id="1313" name="CURSOR_ON_TARGET">
+      <description>Cursor on Target (CoT) tunnel.</description>
+      <field type="uint8_t" name="target_sysid">Target SYSID. Useful to filter messages onboard and not forward to all other deives and ports. Use 0 for broadcast.</field>
+      <field type="uint8_t" name="length">Payload byte array length</field>
+      <field type="uint8_t" name="RESERVED1">RESERVED1</field>
+      <field type="uint8_t" name="RESERVED2">RESERVED2</field>
+      <field type="uint8_t[250]" name="payload">Payload string treated as a text stream. Null termination can not always be expected since a single msg will almost always be larger than array size.</field>
+    </message>
     <!-- Rover specific messages -->
     <message id="9000" name="WHEEL_DISTANCE">
       <description>Cumulative distance traveled for each reported wheel.</description>
