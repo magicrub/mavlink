@@ -4993,6 +4993,13 @@
       <field type="uint32_t" name="active" display="bitmask">Active outputs</field>
       <field type="float[32]" name="actuator">Servo / motor output array values. Zero values indicate unused channels.</field>
     </message>
+
+    <message id="1313" name="PASSTHROUGH">
+      <description>Generic Pass-through messages desied to tunnel to another device.</description>
+      <field type="uint8_t" name="device">Device ID. Useful to filter messages onboard instead of spamming all devices. Use 0 to ignore this field and forward to all devices.</field>
+      <field type="uint8_t[254]" name="payload">Payload to tunnel to the pass-through device.</field>
+    </message>
+
     <!-- Rover specific messages -->
     <message id="9000" name="WHEEL_DISTANCE">
       <description>Cumulative distance traveled for each reported wheel.</description>
@@ -5000,5 +5007,6 @@
       <field type="uint8_t" name="count">Number of wheels reported.</field>
       <field type="double[16]" name="distance" units="m">Distance reported by individual wheel encoders. Forward rotations increase values, reverse rotations decrease them. Not all wheels will necessarily have wheel encoders; the mapping of encoders to wheel positions must be agreed/understood by the endpoints.</field>
     </message>
+
   </messages>
 </mavlink>
