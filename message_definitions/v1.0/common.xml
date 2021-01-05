@@ -3093,7 +3093,7 @@
       <field type="uint16_t" name="errors_count1">Autopilot-specific errors</field>
       <field type="uint16_t" name="errors_count2">Autopilot-specific errors</field>
       <field type="uint16_t" name="errors_count3">Autopilot-specific errors</field>
-      <field type="uint16_t" name="errors_count4">Autopilot-specific errors</field>
+      <field type="uint16_t" name="errors_count_another">Autopilot-specific errors</field>
     </message>
     <message id="2" name="SYSTEM_TIME">
       <description>The system time is the time of the master clock, typically the computer clock of the main onboard computer.</description>
