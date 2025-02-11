@@ -6562,6 +6562,12 @@
       <field type="uint16_t" name="index">Index</field>
       <field type="float" units="A" name="current">Current</field>
     </message>
+    <message id="1304" name="VOLTAGES_AND_CURRENTS">
+      <description>Many voltages.</description>
+      <field type="uint32_t" name="valid">Valid bitfield flag</field>
+      <field type="float[24]" units="V" name="voltage">Voltage</field>
+      <field type="float[24]" units="A" name="current">Current</field>
+    </message>
     <!-- Rover specific messages -->
     <message id="9000" name="WHEEL_DISTANCE">
       <description>Cumulative distance traveled for each reported wheel.</description>
