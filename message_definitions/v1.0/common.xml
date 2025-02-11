@@ -6542,6 +6542,26 @@
       <field type="uint8_t" name="num_ids">number of IDs in filter list</field>
       <field type="uint16_t[16]" name="ids">filter IDs, length num_ids</field>
     </message>
+    <message id="1300" name="VOLTAGES">
+      <description>Many voltages.</description>
+      <field type="uint32_t" name="valid">Valid bitfield flag</field>
+      <field type="float[32]" units="V" name="voltage">Voltage</field>
+    </message>
+    <message id="1301" name="CURRENTS">
+      <description>Many currents.</description>
+      <field type="uint32_t" name="valid">Valid bitfield flag</field>
+      <field type="float[32]" units="A" name="current">Current</field>
+    </message>
+    <message id="1302" name="VOLTAGE_BY_INDEX">
+      <description>A single voltage with an index as the identifier</description>
+      <field type="uint16_t" name="index">Index</field>
+      <field type="float" units="V" name="voltage">Voltage</field>
+    </message>
+    <message id="1303" name="CURRENT_BY_INDEX">
+      <description>A single current with an index as the identifier</description>
+      <field type="uint16_t" name="index">Index</field>
+      <field type="float" units="A" name="current">Current</field>
+    </message>
     <!-- Rover specific messages -->
     <message id="9000" name="WHEEL_DISTANCE">
       <description>Cumulative distance traveled for each reported wheel.</description>
